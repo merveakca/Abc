@@ -2,6 +2,7 @@ using Abc.Northwind.Business.Abstract;
 using Abc.Northwind.Business.Concrete;
 using Abc.Northwind.DataAccess.Abstract;
 using Abc.Northwind.DataAccess.Concrete.EntityFramework;
+using Abc.Northwind.MvcWebUI.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -34,6 +35,10 @@ namespace Abc.Northwind.MvcWebUI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseFileServer();
+            app.UseNodeModules(env.ContentRootPath);
+
             app.UseMvcWithDefaultRoute();
         }
     }

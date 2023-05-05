@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="bootstrap" Version="3.3.7" />
+    <PackageReference Include="jQuery" Version="3.1.1" />
+    <PackageReference Include="jQuery.Validation" Version="1.16.0" />
+    <PackageReference Include="jQuery.Validation.Unobtrusive" Version="2.0.20505" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
@@ -15,6 +19,10 @@
     <ProjectReference Include="..\Abc.Core\Abc.Core.csproj" />
     <ProjectReference Include="..\Abc.Northwind.Business\Abc.Northwind.Business.csproj" />
     <ProjectReference Include="..\Abc.Northwind.Entities\Abc.Northwind.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>
