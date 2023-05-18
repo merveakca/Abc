@@ -25,6 +25,8 @@ namespace Abc.Northwind.MvcWebUI
         {
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IProductDal, EfProductDal>();
+            services.AddScoped<ICategoryService, CategoryManager>();
+            services.AddScoped<ICategoryDal, EfCategoryDal>();
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
