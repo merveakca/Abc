@@ -41,5 +41,10 @@ namespace Abc.Northwind.Business.Concrete
         {
             _productDal.Delete(new Product { ProductId = productId });
         }
+
+        public Product GetById(int productId)
+        {
+            return _productDal.Get(p=>p.ProductId==productId);
+        }
     }
 }
