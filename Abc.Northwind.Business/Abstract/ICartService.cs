@@ -13,6 +13,4 @@ namespace Abc.Northwind.Business.Abstract
         void RemoveFromCart(Cart cart,int productId);
         List<CartLine> List(Cart cart);
     }
-
-
 }

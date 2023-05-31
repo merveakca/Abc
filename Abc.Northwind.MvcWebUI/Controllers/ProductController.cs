@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 
 namespace Abc.Northwind.MvcWebUI.Controllers
 {
@@ -31,6 +32,15 @@ namespace Abc.Northwind.MvcWebUI.Controllers
             };
             return View(model);
         }
+
+        //public string Session()
+        //{
+        //    HttpContext.Session.SetString("city", "Ankara");
+        //    HttpContext.Session.SetInt32("age",32);
+
+        //    HttpContext.Session.GetString("city");
+        //    HttpContext.Session.GetInt32("age");
+        //}
         
     }
 }
