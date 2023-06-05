@@ -34,7 +34,7 @@ namespace Abc.Northwind.MvcWebUI
             services.AddSingleton<ICartSessionService, CartSessionService>();
             services.AddSingleton<ICartService, CartService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddDbContext<CustomIdentityDbContext>(options => options.UseSqlServer("Server=(localdb)\\mssqlocaldb;Database=Northwind;Trusted_Connection=true"));
+            services.AddDbContext<CustomIdentityDbContext>(options => options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=Northwind;Trusted_Connection=true"));
             services.AddIdentity<CustomIdentityUser, CustomIdentityRole>().AddEntityFrameworkStores<CustomIdentityDbContext>().AddDefaultTokenProviders();
             services.AddSession();
             services.AddDistributedMemoryCache();

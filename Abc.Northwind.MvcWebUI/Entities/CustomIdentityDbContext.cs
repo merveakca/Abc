@@ -14,5 +14,8 @@ namespace Abc.Northwind.MvcWebUI.Entities
         {
 
         }
+
+        public DbSet<CustomIdentityUser> CustomIdentityUser { get; set; }
+        public DbSet<CustomIdentityRole> CustomIdentityRole { get; set; }
     }
 }

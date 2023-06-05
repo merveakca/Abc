@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Abc.Northwind.MvcWebUI.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class AdminController:Controller
     {
         private IProductService _productService;

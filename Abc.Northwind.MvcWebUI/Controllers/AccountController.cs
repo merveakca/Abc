@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Abc.Northwind.MvcWebUI.Controllers
 {
-    public class AccountConrroller : Controller
+    public class AccountController : Controller
     {
         private UserManager<CustomIdentityUser> _userManager;
         private RoleManager<CustomIdentityRole> _roleManager;
         private SignInManager<CustomIdentityUser> _signInManager;
 
-        public AccountConrroller(UserManager<CustomIdentityUser> userManager, RoleManager<CustomIdentityRole> roleManager, SignInManager<CustomIdentityUser> signInManager)
+        public AccountController(UserManager<CustomIdentityUser> userManager, RoleManager<CustomIdentityRole> roleManager, SignInManager<CustomIdentityUser> signInManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;

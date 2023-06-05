@@ -13,10 +13,10 @@ namespace Abc.Northwind.MvcWebUI.Models
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-        [Required]
-        [DataType(DataType.Password)]
-        public string ComfirmPassword { get; set; }
-        [Required]
+        //[Required]
+        //[DataType(DataType.Password)]
+        //public string ComfirmPassword { get; set; }
+        //[Required]
         public string Email { get; set; }
     }
 }
