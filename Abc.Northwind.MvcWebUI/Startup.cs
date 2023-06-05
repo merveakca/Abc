@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -53,7 +54,13 @@ namespace Abc.Northwind.MvcWebUI
             app.UseNodeModules(env.ContentRootPath);
             app.UseAuthentication();
             app.UseSession();
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(ConfigureRoutes);
+        }
+
+        private void ConfigureRoutes(IRouteBuilder routeBuilder)
+        {
+            //Home/Index
+            routeBuilder.MapRoute("Default", "{controller=Product}/{action=Index}/{id?}");
         }
     }
 }

@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 
 namespace Abc.Northwind.MvcWebUI.Controllers
@@ -18,6 +17,7 @@ namespace Abc.Northwind.MvcWebUI.Controllers
         {
             _productService = productService;
         }
+
         public ActionResult Index(int page=1, int category=0)
         {
             int pageSize =10;
@@ -41,6 +41,10 @@ namespace Abc.Northwind.MvcWebUI.Controllers
         //    HttpContext.Session.GetString("city");
         //    HttpContext.Session.GetInt32("age");
         //}
-        
+
+        public ActionResult Login()
+        {
+            return View();
+        }
     }
 }
